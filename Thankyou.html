@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Elect Nic Collins for Mayor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+<style type="text/css">.jumbotron { /*image isnt showing for this yet*/
+      background-color: grey;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    /* add bootstrap jumbotron background image */
+    background: url("images/flag.png") no-repeat center center;
+    /* change bootstrap jumbotron text color */
+    color: black;
+    font-size: 250px;
+    font-weight: 20;</style>
+<div class="jumbotron2 text-center">
+  <h1>Nic Collins Thanks you for voting for him. Now refer a friend</h1> 
+  <p>"People Never run out of Business"</p> 
+  <form action="mayor.html" method="get" onsubmit="return check_info();">
+<ul>
+  <li>Usename: <input type="text" name="username" id="username"/></li>
+<li>Password: <input type="password" name="password" id="password"/></li>
+
+<li><input type="submit" value="Let Me In"/></li>
+</ul>
+</form>
+</div>
+<script type="text/javascript">
+    function check_info(){
+       var username = document.getElementById('username').value;
+       var password = document.getElementById('password').value;
+        if (username=="" || password=="") {
+        alert ('Please fill in all fields');
+        return false;
+       }
+       else{
+        return true;
+       }
+    }
+</script>
+</body>
+</html>
