@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+  <!-- Theme Made By Nic - No Copyright -->
+  <title>Power of the People</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color:blue;
+  }
+  
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #0000ff;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color:black;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron { /*image isnt showing for this yet*/
+      background-color: grey;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    /* add bootstrap jumbotron background image */
+    background: url("images/images/flag.png") no-repeat center center;
+    /* change bootstrap jumbotron text color */
+    color: white;
+    font-size: 225px;    
+}
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: grey;
+  }
+  .logo-small {/*icons*/
+      color: blue;
+      font-size: 50px;
+  }
+  .logo {/*iconic images etc globe and chart or graph*/
+      color: blue;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: url(<img src="images/awesome.jpg">);/*image isnt showing for this yet*/
+      color: blue;
+  }
+  .carousel-indicators li {/*outline of the 3 little dots*/
+      border-color:black;
+  }
+  .carousel-indicators li.active {/*inside of dots*/
+      background-color:blue;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid black; /*outline of payment plan boxes*/
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid blue;
+      background-color: #fff !important;
+      color:blue;
+  }
+  .panel-heading {/*background color of title boxes in headings*/
+      color: #fff !important;
+      background-color:blue !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {/* portfolio section bottom part of payment plan containers*/
+      background-color: black !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color:blue;/*donate button color inside of payment plan boxes*/
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color:blue;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .img-circle {
+    border-radius: 50%;
+}
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: blue !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img class="img-circle"  src="images/images/nicson.jpg" img class="round" width="100" height="100" alt=""></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#stance on issues">STANCE ON ISSUES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#donations">DONATIONS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#find our headquarters">FIND US</a></li>
+          <li> <a href="https://www.facebook.com/profile.php?id=1223536790" class="external"><i class="fa fa-2x fa-facebook-square"></i></a></li> 
+      <li><a href="https://twitter.com/Johnny___Tapia" target="blank"><i class="fa fa-2x fa-twitter-square"></i></a></li>
+      <li><a href="https://plus.google.com/114712037268542466571" rel="publisher"><i class="fa fa-2x fa-google-plus-square"></i></a> </li>
+      <li><a href="https://www.youtube.com/channel/UCifcNRxN7KWVUy_R5P96sZA"><i class="fa fa-2x fa-youtube-square"></i></a></li>
+      <li>  <a href="calendar.html"><i class="fa fa-2x fa-calendar"></i></a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>COLLINS</h1> 
+  <p>"People Never Run out of Business"</p> 
+  <form class="form-inline">
+    <input type="email" class="form-control" size="50" placeholder="Tell a friend to vote for me" required>
+    <button type="button" class="btn btn-primary btn-lg">Join the Cause, I need their email</button>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Why Vote for Nic Collins?</h2><br>
+      <h4>You should vote because he is one of the greatest human being to ever walk the earth. That is the reason you should vote for him. Yep yep that is the reason. ok</h4><br>
+      <p>Greatness comes at a price. Float like a butterfly sting like a bee.</p>
+      <br><button class="btn btn-primary btn-lg">I'm Convinced!</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-thumbs-up logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>My values?</h2><br>
+      <h4><strong>MISSION:</strong> I love money so much. I plan to make everyone a an extra 2 grand on each paycheck.</h4><br>
+      <p><strong>VISION:</strong> Our vision is restoring power to the people of america. </p>
+    <button type="button" class="btn btn-primary btn-lg">Awesome</button>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center"><!--REVISIT THIS PART AND TRY AND CHANGE IMAGES TO MAKES SENSE FOR An ACTUAL CAMPAIGN-->
+  <h2>INFO ABOUT COLLINS</h2>
+  <h4>What you don't know and what you should know</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="images/images/blues.png" alt="logo">
+      <span class="glyphicon glyphicon-star logo-small"></span>
+      <h4 style="color:blue;">Cool Facts</h4>
+      <p>Huge Blues fan..</p>
+    </div>
+    <div class="col-sm-4">
+     <img src="images/images/power.png" alt="button">
+      <span class="glyphicon glyphicon-user logo-small"></span>
+      <h4 style="color:blue;">STRATEGIES</h4>
+      <p>Restore Power to the People..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="images/images/missouri_flag.png" alt="button">
+      <span class="glyphicon glyphicon-home logo-small"></span>
+      <h4 style="color:blue;">Born and Raised</h4>
+      <p>I was born heeerree..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="images/images/service.jpg" alt="button">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4 style="color:blue;">Give Back</h4>
+      <p>Its important to give back to the community whenever you have the chance..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="images/images/um.jpg" alt="Union Memorial United Methodist Church">
+      <span class="glyphicon glyphicon-ok-circle logo-small"></span>
+      <h4 style="color:blue;">Church</h4>
+      <p>Methodist. Born and Raised</p>
+    </div>
+    <div class="col-sm-4">
+       <img src="images/images/grow.jpg" alt="flow chart">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:blue;">Money</h4>
+      <p>its simple, Im all about economic growth. Lets Create Wealth.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What have I done?</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/images/gas.jpg" alt="gas" width="400" height="400"><!-- picture of gas not showing. figure it out-->
+        <p><strong>Lowered Gas</strong></p>
+        <p>Hard to believe, but yes I was solely responsible.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/images/school.jpg" alt="New York" width="400" height="300">
+        <p><strong>School is free</strong></p>
+        <p>Great idea. I was able to help get this pushed through congress.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/images/trump.png" alt="San Francisco" width="400" height="300">
+        <p><strong>Kicked Trump out of the country</strong></p>
+        <p>Nuff said</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Supporters of the Campaign</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+       <img src="images/images/obama.png" alt="Obama">
+        <h4>"He's a standup guy. Isnt afraid to make people uncomfortable"<br><span style="font-style:normal;">Barack Obama, Commander and Chief</span></h4>
+      </div>
+      <div class="item">
+      <img src="images/images/curlett.png" alt="Carousel">
+        <h4>"Showed promise from the first day we met! He has my vote"<br><span style="font-style:normal;">, Nik Curlett, Blue 1647</span></h4>
+      </div>
+      <div class="item">
+      <img src="images/images/b.png" alt="Carousel">
+        <h4>"Inspirational Story!!!!!!"<br><span style="font-style:normal;">Beyonce, Singer & Actress</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Get an Email from Nic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> $</p>
+          <p><strong>20</strong> $</p>
+          <p><strong>20</strong> $</p>
+          <p><strong>20</strong> $</p>
+          <p><strong>20</strong> $</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$100</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">DONATE!</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Get a phone call from Nic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>200</strong> $</p>
+          <p><strong>200</strong> $</p>
+          <p><strong>200</strong> $</p>
+          <p><strong>200</strong> $</p>
+          <p><strong>200</strong> $</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$1000</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">DONATE!</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Have dinner with Nic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20,000</strong> $</p>
+          <p><strong>20,000</strong> $</p>
+          <p><strong>20,000</strong> $</p>
+          <p><strong>20,000</strong> $</p>
+          <p><strong>20,000</strong> $</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$100,000</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">DONATE!</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 2 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> U.S.A, St. Louis, MO.</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +13146910387</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> niccollins93@yahoo.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" onclick="check1()" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      </div>
+      </div>
+      </div>
+
+       
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.883082992994!2d-90.26151938475346!3d38.651568579609325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b4d4dc3c9cf9%3A0x41d7428d1385fec2!2s4811+Delmar+Blvd%2C+St.+Louis%2C+MO+63108!5e0!3m2!1sen!2sus!4v1465259007798" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
